@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Create Dotnet WebAPI and Vue project
 date: 2022-06-14T07:46:07.531Z
 tags:
