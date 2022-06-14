@@ -12,11 +12,11 @@ tags:
 
 目前 dotnet core webAPI 專案與 Vue 專案的整合有兩種做法，第一種為將前端專案放置於dotnet專案中，前端專案的資料夾名稱取名為ClientApp，如下圖所示
 
-![](/assets/post-imgs/image-20220524103838794.png)
+![](/Blog/assets/post-imgs/image-20220524103838794.png)
 
 另一種專案架構為將dotnet專案、前端專案各自分開，如下圖
 
-![](/assets/post-imgs/image-20220524104047889.png)
+![](/Blog/assets/post-imgs/image-20220524104047889.png)
 
 ## 專案開發方式
 
@@ -172,7 +172,7 @@ module.exports = {
 
 透過PublishRunWebpack，dotnet專案會在發佈後將前端專案所建置的檔案放置於publish資料夾下的wwwroot資料夾中，所以我們將publish資料夾中的所有檔案上傳至IIS網站資料夾中即可完成網站部屬。
 
-![](/assets/post-imgs/image-20220524134042555.png)
+![](/Blog/assets/post-imgs/image-20220524134042555.png)
 
 ### 排除sockjs-node錯誤訊息問題
 
