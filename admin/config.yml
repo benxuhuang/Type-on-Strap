@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: benxuhuang/benxuhuang.github.io/Blog
+  repo: benxuhuang/Blog
   branch: master
   site_domain: gentle-pika-7f8d13.netlify.com
 
@@ -17,3 +17,6 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+publish_mode: editorial_workflow
+
