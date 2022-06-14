@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: benxuhuang/benxuhuang.github.io
+  repo: benxuhuang/benxuhuang.github.io/Blog
   branch: master
   site_domain: gentle-pika-7f8d13.netlify.com
 
