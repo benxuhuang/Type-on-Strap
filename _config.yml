@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
-baseurl: ""
-url: "https://benxuhuang.github.io/"
+baseurl: "/"
+url: "https://benxuhuang.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
 title: "Ben Huang's Dev Life"                           # site's title
