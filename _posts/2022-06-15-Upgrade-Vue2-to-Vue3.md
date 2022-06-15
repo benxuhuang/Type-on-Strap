@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Upgrade Vue2 to Vue3
+title: Upgrade your vue project from Vue2 to Vue3
 color: turquoise
 feature-img: /assets/post-imgs/vuejs.jpg
 thumbnail: /assets/post-imgs/vuejs.jpg
@@ -21,6 +21,15 @@ vue upgrade
 <!--more-->
 
 ## 2.Modify **package.json** to install Vue 3, the migration build (@vue/compat), and the compiler for single file components (@vue/compiler-sfc)
+
+## 2.Updating your `package.json` file
+### install below packages
+  - "vue": "^3.1.0-0"
+  - "@vue/compat": "^3.1.0-0"
+  - "@vue/compiler-sfc": "^3.1.0-0"
+### remove below packages
+  - "vue": "^2.6.11"
+  -"vue-template-compiler": "^2.6.11"
 
 ```json
 "dependencies": {
@@ -65,13 +74,13 @@ module.exports = {
 }
 ```
 
-## 4.Now, we can restart the development server:
+## 4.And then to restart the development server:
 
 ```shell
   npm run serve
 ```
 
-### 5.Fix errors
+## 5.Fix errors
 
 ## 6.Upgrade Vuex and Vue-Router
 
@@ -80,56 +89,25 @@ module.exports = {
 "vuex": "^4.0.0"
 ```
 
-### Update vuex
+### Update Vuex file
 
 ```javascript
-//import Vue from 'vue'
-//import Vuex from 'vuex'
-//Vue.use(Vuex)
-
 import { createStore } from 'vuex'
 import modules from './modules'
 const store = createStore({ modules, strict: false })
 
-//const store = new Vuex.Store({
-//  modules,
-//  // Enable strict mode in development to get a warning
-//  // when mutating state outside of a mutation.
-//  // https://vuex.vuejs.org/guide/strict.html
-//  strict: process.env.NODE_ENV !== 'production',
-//})
-
 export default store
 ```
 
-### Update router
+### Update Vue-Router file
 
 ```javascript
-//import Vue from 'vue'
-//import VueRouter from 'vue-router'
-//import VueMeta from 'vue-meta'
-//Vue.use(VueRouter)
-
-//Vue.use(VueMeta, {
-//    // The component option name that vue-meta looks for meta info on.
-//    keyName: 'page',
-//})
-
 import routes from './routes'
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 const router = new createRouter({
     routes,
     history: createWebHashHistory(),
-    // Simulate native-like scroll behavior when navigating to a new
-    // route and using back/forward buttons.
-    //scrollBehavior(to, from, savedPosition) {
-    //    if (savedPosition) {
-    //        return savedPosition
-    //    } else {
-    //        return { x: 0, y: 0 }
-    //    }
-    //},
 });
 
 export default router
@@ -138,19 +116,12 @@ export default router
 ## 7.Replace bootstrap-vue with [bootstrap-vue-3](https://cdmoro.github.io/bootstrap-vue-3/getting-started/#why-bootstrapvue3), because bootstrap-vue is not yet ready for Vue3
 
 ```shell
-
 npm install --save bootstrap bootstrap-vue-3 @popperjs/core
-
 ```
 
 ```javascript
 import {createApp} from 'vue'
 import BootstrapVue3 from 'bootstrap-vue-3'
-
-// Optional, since every component import their Bootstrap functionality
-// the following line is not necessary
-// import 'bootstrap'
-
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue-3/dist/bootstrap-vue-3.css'
 

@@ -8,7 +8,7 @@ tags: [SideProject]
 
 ![image]({{ page.img | relative_url }})
 
-This website provides information about the eBooks on sale from the Kobo official website.
+This [website](https://kobo-promo.com/) provides information about the eBooks on sale from the Kobo official website.
 
 Website Technology Stack
 - Backend
