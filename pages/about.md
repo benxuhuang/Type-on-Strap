@@ -6,9 +6,18 @@ feature-img: "assets/img/pexels/travel.jpeg"
 tags: [Page]
 ---
 
-Type on Strap is based on Type Theme, a free and open-source theme for [Jekyll](http://jekyllrb.com/), licensed under the MIT License.
+Hi! My name is Ben Huang
 
-Head over to the [theme's documentation](https://github.io/sylhare/Type-on-Strap) for much more information about Type on Strap or to install this theme on your own Jekyll site.
+As a software developer, I have over 6 years of experience working on various projects ranging from frontend to backend development. 
 
-This file is an example of a page in Jekyll, that automatically shows up in the header navigation, you can delete or modify this file freely.
+Detailed-oriented, responsible, and committed engineer, with a get-it-done, on-time, and experience defining requirements, designing, implementing, testing, and delivering complex back-end and web applications using various programming languages and technologies.
+ 
+Here are just a few of the technical skills I bring to the table
+* Programming languages: C#, Python, Javascript, SQL, HTML, CSS
+* Database: Microsoft SQL Server, MongoDB
+* Backend Framework: ASP.NET Core, Express
+* Frontend Framework: Vue.js
+* CSS Framework: Bootstrap, Tailwind
+* Cloud Experience: Azure, Heroku
+* Tools: Visual Studio, Git, GitHub, Docker
  
