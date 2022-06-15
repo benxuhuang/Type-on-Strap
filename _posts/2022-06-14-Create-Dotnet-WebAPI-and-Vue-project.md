@@ -197,12 +197,12 @@ module.exports = {
 
 為了讓IE11能順利支援ES6的新語法，必須要透過以下babel套件來進行轉換
 
-1. @babel/core : babel 的核心程式碼
-2. @babel/cli : 終端機上使用 babel
-3. @babel/polyfill: 發布的環境下使用的套件
-4. @babel/preset-env: 能讓你用最新的 JavaScript 語法寫程式，並且自動根據瀏覽器的環境引入需要的 polyfill。
+- @babel/core : babel 的核心程式碼
+- @babel/cli : 終端機上使用 babel
+- @babel/polyfill: 發布的環境下使用的套件
+- @babel/preset-env: 能讓你用最新的 JavaScript 語法寫程式，並且自動根據瀏覽器的環境引入需要的 polyfill。
 
-   1. https://shubo.io/babel-preset-env/
+   https://shubo.io/babel-preset-env/
 
 安裝套件
 
