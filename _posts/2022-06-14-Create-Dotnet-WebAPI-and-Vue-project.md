@@ -45,20 +45,20 @@ tags:
    1. 安裝套件
 
       ```shell
-      	dotnet add package Microsoft.AspNetCore.SpaProxy --version 6.0.5
+      dotnet add package Microsoft.AspNetCore.SpaProxy --version 6.0.5
       ```
    2. 設定csproj
 
       ```csharp
-        <PropertyGroup>
-          //設定前端專案目錄位置
-          <SpaRoot>..\VueProject\</SpaRoot>
-          //設定當前端dev server啟動後將網址轉至前端專案網址
-          <SpaProxyServerUrl>https://localhost:5002</SpaProxyServerUrl>
-      		//設定執行前端專案指令
-          <SpaProxyLaunchCommand>npm run serve</SpaProxyLaunchCommand>
-          <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**		</DefaultItemExcludes>
-        </PropertyGroup>
+      <PropertyGroup>
+        //設定前端專案目錄位置
+        <SpaRoot>..\VueProject\</SpaRoot>
+        //設定當前端dev server啟動後將網址轉至前端專案網址
+        <SpaProxyServerUrl>https://localhost:5002</SpaProxyServerUrl>
+        //設定執行前端專案指令
+        <SpaProxyLaunchCommand>npm run serve</SpaProxyLaunchCommand>
+        <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**		</DefaultItemExcludes>
+      </PropertyGroup>
       ```
    3. 設定dotnet專案 launchSettings.json
 

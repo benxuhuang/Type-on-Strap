@@ -20,10 +20,12 @@ vue upgrade
 
 <!--more-->
 ## 2.Updating your `package.json` file
+
 ### install below packages
   - "vue": "^3.1.0-0"
   - "@vue/compat": "^3.1.0-0"
   - "@vue/compiler-sfc": "^3.1.0-0"
+
 ### remove below packages
   - "vue": "^2.6.11"
   - "vue-template-compiler": "^2.6.11"
@@ -74,7 +76,7 @@ module.exports = {
 ## 4.And then to restart the development server:
 
 ```shell
-  npm run serve
+npm run serve
 ```
 
 ## 5.Fix errors
