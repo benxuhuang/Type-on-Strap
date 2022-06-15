@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 feature-img: "assets/img/pexels/travel.jpeg"
-tags: [Page]
+tags: []
 ---
 
 Hi! My name is Ben Huang
