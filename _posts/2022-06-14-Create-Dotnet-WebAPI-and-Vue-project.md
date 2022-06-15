@@ -2,8 +2,8 @@
 layout: post
 title: Create Dotnet WebAPI and Vue project
 color: turquoise
-feature-img: "assets/img/feature-img/circuit.jpeg"
-thumbnail: "assets/img/thumbnails/feature-img/circuit.jpeg"
+feature-img: "/assets/post-imgs/code-monitor.jpeg"
+thumbnail: "/assets/post-imgs/code-monitor.jpeg"
 excerpt_separator: <!--more-->
 tags:
   - vue
@@ -17,11 +17,11 @@ tags:
 
 <!--more-->
 
-![](/Blog/assets/post-imgs/image-20220524103838794.png)
+{% include aligner.html images="image-20220524103838794.png" column=1 %}
 
 另一種專案架構為將dotnet專案、前端專案各自分開，如下圖
 
-![](/Blog/assets/post-imgs/image-20220524104047889.png)
+{% include aligner.html images="image-20220524104047889.png" column=1 %}
 
 ## 專案開發方式
 

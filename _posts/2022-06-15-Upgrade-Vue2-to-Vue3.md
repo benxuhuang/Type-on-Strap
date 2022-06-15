@@ -7,10 +7,11 @@ tags:
 color: ""
 author: Ben Huang
 layout: post
-feature-img: /assets/post-imgs/story.jpeg
-thumbnail: /assets/post-imgs/story.jpeg
+feature-img: /assets/post-imgs/vuejs.jpeg
+thumbnail: /assets/post-imgs/vuejs.jpeg
 hide: true
 bootstrap: true
+excerpt_separator: <!--more-->
 ---
 ### 1.Upgrade Vue CLI to the latest version
 
@@ -18,7 +19,7 @@ bootstrap: true
 vue upgrade
 ```
 
-![](/assets/post-imgs/image-20220608113243532.png)
+{% include aligner.html images="image-20220608113243532.png" column=1 %}
 
 ### 2.Modify **package.json** to install Vue 3, the migration build (@vue/compat), and the compiler for single file components (@vue/compiler-sfc)
 
@@ -35,6 +36,7 @@ vue upgrade
     ...
 }
 ```
+<!--more-->
 
 ```shell
 npm install
