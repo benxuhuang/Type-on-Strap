@@ -7,8 +7,8 @@ tags:
 color: ""
 author: Ben Huang
 layout: post
-feature-img: /assets/post-imgs/vuejs.jpeg
-thumbnail: /assets/post-imgs/vuejs.jpeg
+feature-img: /assets/post-imgs/vuejs.jpg
+thumbnail: /assets/post-imgs/vuejs.jpg
 hide: true
 bootstrap: true
 excerpt_separator: <!--more-->
@@ -16,7 +16,7 @@ excerpt_separator: <!--more-->
 ### 1.Upgrade Vue CLI to the latest version
 
 ```shell
-vue upgrade
+  vue upgrade
 ```
 
 {% include aligner.html images="image-20220608113243532.png" column=1 %}
@@ -39,7 +39,7 @@ vue upgrade
 <!--more-->
 
 ```shell
-npm install
+  npm install
 ```
 
 ### 3.Create a `vue.config.js` file to set up some compiler options:
@@ -69,7 +69,7 @@ module.exports = {
 ### 4.Now, we can restart the development server:
 
 ```shell
-npm run serve
+  npm run serve
 ```
 
 ### 5.Fix errors
@@ -139,7 +139,7 @@ export default router
 ### 7.Replace bootstrap-vue with [bootstrap-vue-3](https://cdmoro.github.io/bootstrap-vue-3/getting-started/#why-bootstrapvue3), because bootstrap-vue is not yet ready for Vue3
 
 ```shell
-npm i --save bootstrap bootstrap-vue-3 @popperjs/core
+  npm install --save bootstrap bootstrap-vue-3 @popperjs/core
 ```
 
 ```javascript

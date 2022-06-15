@@ -2,8 +2,8 @@
 layout: post
 title: Create Dotnet WebAPI and Vue project
 color: turquoise
-feature-img: "/assets/post-imgs/code-monitor.jpeg"
-thumbnail: "/assets/post-imgs/code-monitor.jpeg"
+feature-img: "/assets/post-imgs/code-monitor.jpg"
+thumbnail: "/assets/post-imgs/code-monitor.jpg"
 excerpt_separator: <!--more-->
 tags:
   - vue
@@ -27,7 +27,7 @@ tags:
 
 以上專案架構可配合以下兩種專案開發方式
 
-1. 前後端專案分開建置: 透過Visual studio 2022 設定分開建置dotnet專案與前端專案，當專案在進行Debug(F5)時，IDE會各自建置API專案與前端專案，前端專案會獨立開啟一個Chrome瀏覽器，且無法設定為由既有瀏覽器開啟。
+前後端專案分開建置: 透過Visual studio 2022 設定分開建置dotnet專案與前端專案，當專案在進行Debug(F5)時，IDE會各自建置dotnet專案與前端專案，前端專案會獨立開啟一個Chrome瀏覽器，且無法設定為由既有瀏覽器開啟。
 
    設定的方式參考微軟官方教學
 
