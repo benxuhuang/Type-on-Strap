@@ -16,6 +16,12 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Tags", name: "tags", widget: "list"}
+      - {label: 'Color', name: 'color', widget: 'color', enableAlpha: true, allowInput: true, required: false}
+      - {label: "Author", name: "author", widget: "hidden", default: "Ben Huang"}
+      - {label: "Layout" name: "layout" widget: "select" options: ["post", "page", "search"]}
+      - {label: "Featured Image", name: "feature-img", widget: "image", default: "assets/img/feature-img/circuit.jpeg", required: false}
+      - {label: "Hide", name: "hide", widget: "boolean", default: false} # Prevent the page title to appear in the navbar
+      - {label: "Bootstrap", name: "bootstrap", widget: "boolean", default: false} # Prevent the page title to appear in the navbar
       - {label: "Body", name: "body", widget: "markdown"}
 
 publish_mode: editorial_workflow
