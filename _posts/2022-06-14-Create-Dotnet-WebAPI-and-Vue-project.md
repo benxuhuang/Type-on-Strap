@@ -2,6 +2,7 @@
 layout: post
 title: Create Dotnet WebAPI and Vue project
 color: turquoise
+excerpt_separator: <!--more-->
 tags:
   - vue
   - dotnet
@@ -11,6 +12,8 @@ tags:
 ## 專案架構
 
 目前 dotnet core webAPI 專案與 Vue 專案的整合有兩種做法，第一種為將前端專案放置於dotnet專案中，前端專案的資料夾名稱取名為ClientApp，如下圖所示
+
+<!--more-->
 
 ![](/Blog/assets/post-imgs/image-20220524103838794.png)
 
