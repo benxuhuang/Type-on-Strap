@@ -1,10 +1,12 @@
 ---
 layout: post
 title: Kobo-promo.com
-img: "/assets/post-imgs/kobo-promo-1.jpg"
+img: "assets/post-imgs/kobo-promo-1.jpg"
 date: 27 September 2021
 tags: [SideProject]
 ---
+
+![image]({{ page.img | relative_url }})
 
 This website provides information about the eBooks on sale from the Kobo official website.
 

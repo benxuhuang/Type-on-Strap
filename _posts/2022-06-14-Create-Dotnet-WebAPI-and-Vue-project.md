@@ -240,7 +240,7 @@ module.exports = {
 }
 ```
 
-### 參考
+## 參考
 
 1. [教學課程：使用 Vue 在 Visual Studio 中建立 ASP.NET Core 應用程式](https://docs.microsoft.com/zh-tw/visualstudio/javascript/tutorial-asp-net-core-with-vue?utm_source=pocket_mylist&view=vs-2022)
 2. [Webpack 筆記整理 (十四) - Babel](https://medium.com/@cos214159/webpack-%E7%AD%86%E8%A8%98%E6%95%B4%E7%90%86-%E5%8D%81%E5%9B%9B-babel-73451d36a116)

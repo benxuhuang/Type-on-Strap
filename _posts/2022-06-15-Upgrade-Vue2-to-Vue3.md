@@ -1,29 +1,26 @@
 ---
+layout: post
 title: Upgrade Vue2 to Vue3
-date: 2022-06-15T02:42:11.286Z
+color: turquoise
+feature-img: /assets/post-imgs/vuejs.jpg
+thumbnail: /assets/post-imgs/vuejs.jpg
+excerpt_separator: <!--more-->
 tags:
   - vue2
   - vue3
-color: turquoise
-author: Ben Huang
-layout: post
-feature-img: /assets/post-imgs/vuejs.jpg
-thumbnail: /assets/post-imgs/vuejs.jpg
-hide: true
-bootstrap: true
-excerpt_separator: <!--more-->
 ---
-### 1.Upgrade Vue CLI to the latest version
+
+## 1.Upgrade Vue CLI to the latest version
 
 ```shell
-  vue upgrade
+vue upgrade
 ```
 
 {% include aligner.html images="image-20220608113243532.png" column=1 %}
 
 <!--more-->
 
-### 2.Modify **package.json** to install Vue 3, the migration build (@vue/compat), and the compiler for single file components (@vue/compiler-sfc)
+## 2.Modify **package.json** to install Vue 3, the migration build (@vue/compat), and the compiler for single file components (@vue/compiler-sfc)
 
 ```json
 "dependencies": {
@@ -41,10 +38,10 @@ excerpt_separator: <!--more-->
 <!--more-->
 
 ```shell
-  npm install
+npm install
 ```
 
-### 3.Create a `vue.config.js` file to set up some compiler options:
+## 3.Create a `vue.config.js` file to set up some compiler options:
 
 ```javascript
 module.exports = {
@@ -68,7 +65,7 @@ module.exports = {
 }
 ```
 
-### 4.Now, we can restart the development server:
+## 4.Now, we can restart the development server:
 
 ```shell
   npm run serve
@@ -76,14 +73,14 @@ module.exports = {
 
 ### 5.Fix errors
 
-### 6.Upgrade Vuex and Vue-Router
+## 6.Upgrade Vuex and Vue-Router
 
 ```json
 "vue-router": "^4.0.0",
 "vuex": "^4.0.0"
 ```
 
-#### Update vuex
+### Update vuex
 
 ```javascript
 //import Vue from 'vue'
@@ -105,7 +102,7 @@ const store = createStore({ modules, strict: false })
 export default store
 ```
 
-#### Update router
+### Update router
 
 ```javascript
 //import Vue from 'vue'
@@ -138,10 +135,12 @@ const router = new createRouter({
 export default router
 ```
 
-### 7.Replace bootstrap-vue with [bootstrap-vue-3](https://cdmoro.github.io/bootstrap-vue-3/getting-started/#why-bootstrapvue3), because bootstrap-vue is not yet ready for Vue3
+## 7.Replace bootstrap-vue with [bootstrap-vue-3](https://cdmoro.github.io/bootstrap-vue-3/getting-started/#why-bootstrapvue3), because bootstrap-vue is not yet ready for Vue3
 
 ```shell
-  npm install --save bootstrap bootstrap-vue-3 @popperjs/core
+
+npm install --save bootstrap bootstrap-vue-3 @popperjs/core
+
 ```
 
 ```javascript
@@ -160,10 +159,9 @@ app.use(BootstrapVue3)
 app.mount('#app')
 ```
 
-### Ref:
+## 參考:
 
-[bootstrap-vue-3](https://www.npmjs.com/package/bootstrap-vue-3)
+1. [bootstrap-vue-3](https://www.npmjs.com/package/bootstrap-vue-3)
+2. [installation-vue-js](https://cdmoro.github.io/bootstrap-vue-3/getting-started/#installation-vue-js)
+3. [how-to-use-vue-3-add-plugin-boostrap-vue](https://stackoverflow.com/questions/63570340/how-to-use-vue-3-add-plugin-boostrap-vue)
 
-[how-to-use-vue-3-add-plugin-boostrap-vue](https://stackoverflow.com/questions/63570340/how-to-use-vue-3-add-plugin-boostrap-vue)
-
-[installation-vue-js](https://cdmoro.github.io/bootstrap-vue-3/getting-started/#installation-vue-js)
