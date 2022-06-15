@@ -3,6 +3,7 @@ layout: post
 title: Create Dotnet WebAPI and Vue project
 color: turquoise
 feature-img: "assets/img/feature-img/circuit.jpeg"
+thumbnail: "assets/img/thumbnails/feature-img/circuit.jpeg"
 excerpt_separator: <!--more-->
 tags:
   - vue
