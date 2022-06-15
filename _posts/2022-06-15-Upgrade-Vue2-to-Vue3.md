@@ -8,6 +8,7 @@ color: ""
 author: Ben Huang
 layout: post
 feature-img: /assets/post-imgs/story.jpeg
+thumbnail: /assets/post-imgs/story.jpeg
 hide: true
 bootstrap: true
 ---
