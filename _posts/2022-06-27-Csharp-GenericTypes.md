@@ -2,8 +2,8 @@
 layout: post
 title: C# GenericTypes 泛型類別
 color: turquoise
-feature-img: /assets/post-imgs/thumbnails/pexels-poyee-tsang-12139755.jpg
-thumbnail: /assets/post-imgs/thumbnails/pexels-poyee-tsang-12139755.jpg
+feature-img: /assets/post-imgs/thumbnails/pexels-caio-69976.jpg
+thumbnail: /assets/post-imgs/thumbnails/pexels-caio-69976.jpg
 excerpt_separator: <!--more-->
 tags:
   - C#
