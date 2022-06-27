@@ -2,8 +2,8 @@
 layout: post
 title: Upgrade your vue project from Vue2 to Vue3
 color: turquoise
-feature-img: /assets/post-imgs/vuejs.jpg
-thumbnail: /assets/post-imgs/vuejs.jpg
+feature-img: /assets/post-imgs/thumbnails/vuejs.jpg
+thumbnail: /assets/post-imgs/thumbnails/vuejs.jpg
 excerpt_separator: <!--more-->
 tags:
   - vue2
