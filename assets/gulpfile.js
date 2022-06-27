@@ -95,6 +95,20 @@ gulp.task('thumbnails-all', function () {
       .pipe(gulp.dest('img/thumbnails'))
 });
 
+gulp.task('thumbnails-post', function () {
+  let settings = {
+    width: '50%',
+    //format: 'jpeg', // convert to jpeg format
+  };
+
+  return gulp.src('post-imgs/*')
+    .pipe(responsive({
+      '**/*.*': settings,
+      '*.*': settings,
+    }))
+    .pipe(gulp.dest('post-imgs/thumbnails'))
+});
+
 gulp.task('webp', () =>
   gulp.src('img/**/*.{png,svg,jpg,jpeg,gif}')
     .pipe(webp({
