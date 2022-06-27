@@ -64,7 +64,7 @@ class 類別名稱<T1, T2,..., Tn>
 ```
 
 ### 開放型別、建構型別
-類別名稱<T> 並不是真正用來建立物件實體的類別，僅是一個樣板，又稱作開放型別(open type)。有帶入型別參數的類別，才是可以用來建立物件實體的類別，又稱作建構型別(constructed type)或關閉型別(closed type)。
+`類別名稱<T>` 並不是真正用來建立物件實體的類別，僅是一個樣板，又稱作`開放型別(open type)`。有帶入型別參數的類別，才是可以用來建立物件實體的類別，又稱作`建構型別(constructed type)`或`關閉型別(closed type)`。
 
 ```csharp
 static void Main(string[] args)
@@ -101,7 +101,7 @@ namespace GenericTypesSample
 
 ### 型別參數條件約束
 
-在 .NET 中任何型別皆繼承自 System.Object，當要在泛型類別中存取T的物件實體成員時，就只能有 Object 的成員可以使用，例如 Equals()、GetType()、ToString() 等等。
+**在 .NET 中任何型別皆繼承自 System.Object**，當要在泛型類別中存取T的物件實體成員時，就只能有 Object 的成員可以使用，例如 `Equals()`、`GetType()`、`ToString()` 等等。
 
 但有時候我們會需要存取參數型別的方法或屬性，例如我們想使用 Compare 方法來比較兩個物件，這時候如果像下面這個寫，編譯器會顯示錯誤，型別無法對應到特定方法。
 
@@ -117,7 +117,7 @@ public class GenericList<T>
 }
 ```
 
-此時就可以透過 where 條件約束來限定可傳入的型別，限定傳入的型別可以讓編譯器知道傳入型別參數 T 的相關成員，例如以上面這個 Compare 當例子，我們必須實作 IComparable<T>。
+此時就可以透過 where 條件約束來限定可傳入的型別，限定傳入的型別可以讓編譯器知道傳入型別參數 T 的相關成員，例如以上面這個 Compare 當例子，我們必須實作 `IComparable<T>`。
 
 ```csharp
 public class GenericList<T> where T: IComparable<T>
@@ -151,7 +151,7 @@ namespace GenericTypesSample
 
 ### 泛型介面、泛型結構
 
-我們也可以使用泛型語法來定義泛型介面與泛型結構，我們可以將類別中的基本操作或屬性抽離出來放在泛型介面，如下我們將共用的屬性抽離成泛型介面，並由另外一個泛型類別繼承與實作。
+我們也可以使用泛型語法來定義泛型介面與泛型結構，我們可以**將類別中的基本操作或屬性抽離出來放在泛型介面**，如下我們將共用的屬性抽離成泛型介面，並由另外一個泛型類別繼承與實作。
 
 ```csharp
 namespace GenericTypesSample
@@ -251,37 +251,34 @@ public class GenericMethod
 
 型別相容主要包含三個核心概念: `共變性(Covariance)`、`逆變性(Contravariance)`、`不變性(Invariance)`。
 
-1. 共變性(Convariance): 如果型別A繼承自型別B，則A可以隱含自動轉型為B，此概念則稱為具有共變性。以下的範例，因C#中的任何型別皆繼承自Object型別，所以我們可以將字串陣列直接Assign給物件陣列而不會發生異常，這就是共變性的特性。
+1.共變性(Convariance): 如果型別A繼承自型別B，則A可以隱含自動轉型為B，此概念則稱為具有共變性。以下的範例，因C#中的任何型別皆繼承自Object型別，所以我們可以將字串陣列直接Assign給物件陣列而不會發生異常，這就是共變性的特性。
 
 ```csharp
 string[] strArr = new string[5];
 object[] objArr = strArr;
 ```
 
-2. 不變性(Invariance): 泛型本身具有不變性(Invariance)，所以你無法把一個List<string>型別的物件Assign給List<object>物件，子類與父類不能互相取代。
+2.不變性(Invariance): 泛型本身具有不變性(Invariance)，所以你無法把一個`List<string>`型別的物件Assign給`List<object>`物件，子類與父類不能互相取代。
 
 ```csharp
 List<string> strList = new List<string>();
 List<object> objList = strList; //編輯器錯誤
 ```
 
-但 .NET Framework 4 針對泛型支援共變性(Covariance)與逆變性(Contravariance)，透過 C# 4 所提供的 in 與 out 兩個修飾詞來支援以上特性。
+但 .NET Framework 4 針對泛型支援`共變性(Covariance)`與`逆變性(Contravariance)`，透過 C# 4 所提供的 in 與 out 兩個修飾詞來支援以上特性。
 
-以 IEnumerable\<out T> 為例，因為 IEnumerable\<out T> 的參數為 out T，表明參數 T 只能當作回傳值使用，這就是支援共變性(Covariance)的做法，但也因為僅能當回傳值用，所以 IEnumerable\<T> 並不支援串列元素修改、更新，僅能唯讀使用。
+以 `IEnumerable<out T>` 為例，因為 `IEnumerable<out T>` 的參數為 out T，表明參數 T 只能當作回傳值使用，這就是支援共變性(Covariance)的做法，但也因為僅能當回傳值用，所以 `IEnumerable<T>` 並不支援串列元素修改、更新，僅能唯讀使用。
 
 ```csharp
 public interface IEnumerable<out T> : IEnumerable
 {
     IEnumerable<T> GetEnumerator();
 }
-```
-
-```csharp
 List<string> strList = new List<string>();
 IEnumerable<object> objList = strList;
 ```
 
-3. 逆變性(Contravariance): in 修飾詞來支援泛型逆變性，以下以 IComparer\<in T> 當例子
+3.逆變性(Contravariance): in 修飾詞來支援泛型逆變性，以下以 `IComparer<in T>` 當例子
 
 ```csharp
 public class Course {
@@ -326,4 +323,4 @@ public interface IComparer<in T>
 }
 ```
 
-因為 IComparer\<in T>的參數限定為只能當參數，以上面的例子在 `chinese.Sort(courseComparer)`時，原本我們必須傳入繼承的型別 `IComparer\<Chinese>`，但我們卻傳入被繼承的型別 `IComparer\<Course>`，在這裡就發生了所謂的`逆變性(Contravariance)` 。
+因為 `IComparer<in T>` 的參數限定為只能當參數，以上面的例子在 `chinese.Sort(courseComparer)`時，原本我們必須傳入繼承的型別 `IComparer<Chinese>`，但我們卻傳入被繼承的型別 `IComparer<Course>`，在這裡就發生了所謂的`逆變性(Contravariance)` 。
