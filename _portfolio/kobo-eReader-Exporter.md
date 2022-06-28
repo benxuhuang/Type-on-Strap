@@ -6,8 +6,6 @@ date: 27 September 2021
 tags: [SideProject]
 ---
 
-# Kobo eReader Exporter
-
 <p align='left'>
   A GUI application that makes you export data from the Kobo eReader database., built on Electron and Vue.js.
 </p>
@@ -16,18 +14,18 @@ tags: [SideProject]
 
 <!-- downloads -->
 <a href="https://github.com/benxuhuang/electron-vue-kobo-eReader-exporter/releases">
-<img src="https://img.shields.io/github/downloads/benxuhuang/electron-vue-kobo-eReader-exporter/total.svg?style=flat" alt="downloads"/>
+<img src="https://img.shields.io/github/downloads/benxuhuang/electron-vue-kobo-eReader-exporter/total.svg?style=flat" alt="downloads" style="padding: 0;" />
 </a>
 <!-- version -->
 <a href="https://github.com/benxuhuang/electron-vue-kobo-eReader-exporter/releases">
-<img src="https://img.shields.io/github/release-pre/benxuhuang/electron-vue-kobo-eReader-exporter.svg?style=flat" alt="latest version"/>
+<img src="https://img.shields.io/github/release-pre/benxuhuang/electron-vue-kobo-eReader-exporter.svg?style=flat" alt="latest version" style="padding: 0;" />
 </a>
 <!-- platform -->
 <a href="https://github.com/benxuhuang/electron-vue-kobo-eReader-exporter">
-<img src="https://img.shields.io/badge/platform-macOS-lightgrey.svg?style=flat" alt="platform"/>
+<img src="https://img.shields.io/badge/platform-macOS-lightgrey.svg?style=flat" alt="platform" style="padding: 0;" />
 </a>
 <a href="https://github.com/benxuhuang/electron-vue-kobo-eReader-exporter">
-<img src="https://img.shields.io/badge/platform-windows-lightgrey.svg?style=flat" alt="platform"/>
+<img src="https://img.shields.io/badge/platform-windows-lightgrey.svg?style=flat" alt="platform" style="padding: 0;" />
 </a>
 
 <br>
