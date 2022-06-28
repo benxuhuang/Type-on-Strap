@@ -12,7 +12,7 @@ tags:
 
 ### 泛型出現的原因
 
-當C#還沒有泛型時，如果我們要儲存不確定數量的資料到變數時，我們可能會使用ArrayList來處理，在沒有泛型的情況下，我們必須使用以下的方式撰寫:
+當C#還沒有泛型時，如果我們要儲存不確定數量的資料到變數時，我們可能會使用`ArrayList`來處理，在沒有泛型的情況下，我們必須使用以下的方式撰寫:
 
 <!--more-->
 
@@ -40,20 +40,20 @@ namespace GenericTypesSample
 
 以上的作法會發生以下兩種問題:
 
-1.手動轉型問題
+**1.手動轉型問題**
 
 因為ArrayList是屬於System.Collections命名空間的集合類別，所以當物件存入ArrayList時會自動被轉成Object型別，故要取用ArrayList資料時必須要明確轉型，否則無法通過編譯器檢查。
 
-2.執行期型別轉換問題
+**2.執行期型別轉換問題**
 
 另一個問題為如果不小心將明確轉型的目標型別寫成來源物件不相容的型別，這種情況下編譯器無法檢查出來，會造成執行期錯誤，無法達到編譯期的型別安全檢查效果。
 
 除了以上的問題外，還可能需要對每一個類型撰寫各自的集合類別，最後這些自訂類別可能會產生大量的重複程式碼，當未來需要增加新的方法或是屬性時，就必須逐一修改，最後導致維護成本的增加。
 
-泛型的出現就是為了解決以上問題
+**泛型的出現就是為了解決以上問題**
 
 ### 泛型基本語法
-泛型可用於類別、介面、委派和方法，以下是泛型類別的基本語法
+泛型可用於`類別`、`介面`、`委派`和`方法`，以下是泛型類別的基本語法
 
 ```csharp
 class 類別名稱<T1, T2,..., Tn>
@@ -249,16 +249,16 @@ public class GenericMethod
 
 ### 泛型型別相容問題
 
-型別相容主要包含三個核心概念: `共變性(Covariance)`、`逆變性(Contravariance)`、`不變性(Invariance)`。
+**型別相容主要包含三個核心概念:** `共變性(Covariance)`、`逆變性(Contravariance)`、`不變性(Invariance)`。
 
-1.共變性(Convariance): 如果型別A繼承自型別B，則A可以隱含自動轉型為B，此概念則稱為具有共變性。以下的範例，因C#中的任何型別皆繼承自Object型別，所以我們可以將字串陣列直接Assign給物件陣列而不會發生異常，這就是共變性的特性。
+**1.共變性(Convariance):** 如果型別A繼承自型別B，則A可以隱含自動轉型為B，此概念則稱為具有共變性。以下的範例，因C#中的任何型別皆繼承自Object型別，所以我們可以將字串陣列直接Assign給物件陣列而不會發生異常，這就是共變性的特性。
 
 ```csharp
 string[] strArr = new string[5];
 object[] objArr = strArr;
 ```
 
-2.不變性(Invariance): 泛型本身具有不變性(Invariance)，所以你無法把一個`List<string>`型別的物件Assign給`List<object>`物件，子類與父類不能互相取代。
+**2.不變性(Invariance):** 泛型本身具有不變性(Invariance)，所以你無法把一個List\<string>型別的物件Assign給List\<object>物件，子類與父類不能互相取代。
 
 ```csharp
 List<string> strList = new List<string>();
@@ -278,7 +278,7 @@ List<string> strList = new List<string>();
 IEnumerable<object> objList = strList;
 ```
 
-3.逆變性(Contravariance): in 修飾詞來支援泛型逆變性，以下以 `IComparer<in T>` 當例子
+**3.逆變性(Contravariance):** in 修飾詞來支援泛型逆變性，以下以 `IComparer<in T>` 當例子
 
 ```csharp
 public class Course {
